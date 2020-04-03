@@ -11,10 +11,19 @@
   <body>
     <div class="header-lobs">
       <h1>L'OBSERVATOIRE</h1>
+      <h5>MUSIQUE</h5>
+    </div>
+    <div class="other-pages">
+      <%= link_to "MAGAZINE", "https://www.lobservatoire.co/magazine" %>
+      <%= link_to "JEUNES CREATEURS", "https://www.lobservatoire.co/les-jeunes-createurs/" %>
+      <%= link_to "STORE", "https://store-lobservatoire.co/" %>
     </div>
     <div class="containing">
       <%= yield %>
     </div>
     <%= javascript_pack_tag 'application' %>
+    <script src="//widget.mixcloud.com/media/js/footerWidgetApi.js" async>
+    {"feed": "/LobservatoireLive/"}
+    </script>
   </body>
 </html>

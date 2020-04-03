@@ -1,14 +1,21 @@
-<div class="newest-track" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
+<div class="banner-newest-track">
+  <div class="newest-track" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
+  <div class="newest-track-info">
+    <div class="newest-track-head">La playlist de la semaine</div>
+    <div class="newest-track-name"><%= @tracks["data"][0]["name"] %></div>
+  </div>
+</div>
+
 <div class="all-tracks">
   <% @tracks["data"].each do |track| %>
-    <div class="track-card" style="background-image: url(<%=track["pictures"]["320wx320h"]%>)" data-mixcloud-play-button="<%=track["url"]%>">
-    </div>
-    <div class="track-info">
-      <%= track["name"] %>
-      <%= (track["audio_length"].to_i)/60 %> min
+    <div class="track-block">
+      <div class="track-card" style="background-image: url(<%=track["pictures"]["320wx320h"]%>)" data-mixcloud-play-button="<%=track["url"]%>">
+      </div>
+      <div class="track-info">
+        <h5><%= track["name"] %></h5>
+        <p><%= (track["audio_length"].to_i)/60 %> min</p>
+      </div>
     </div>
   <% end %>
 </div>
-<script src="//widget.mixcloud.com/media/js/footerWidgetApi.js" async>
-{"feed": "/LobservatoireLive/"}
-</script>
+
