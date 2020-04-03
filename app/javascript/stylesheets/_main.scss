@@ -1,3 +1,18 @@
-h1 {
-  color: red;
+.containing {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  .newest-track {
+    width: 600px;
+    height: 400px;
+  }
+  .all-tracks {
+    width: 100%;
+    padding: 50px;
+    .track-card {
+      width: 300px;
+      height: 300px;
+    }
+  }
 }

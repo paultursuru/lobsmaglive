@@ -1,4 +1,11 @@
-<h1>Hello World</h1>
-<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-  Tooltip on top
-</button>
+<div class="newest-track" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
+<div class="all-tracks">
+  <% @tracks["data"].each do |track| %>
+    <div class="track-card" style="background-image: url(<%=track["pictures"]["320wx320h"]%>)" data-mixcloud-play-button="<%=track["url"]%>">
+    </div>
+    <div class="track-info">
+      <%= track["name"] %>
+      <%= (track["audio_length"].to_i)/60 %> min
+    </div>
+  <% end %>
+</div>

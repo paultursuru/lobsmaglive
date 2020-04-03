@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="containing">
+      <%= yield %>
+    </div>
+    <script src="//widget.mixcloud.com/media/js/footerWidgetApi.js" async>
+    {"feed": "/LobservatoireLive/"}
+    </script>
   </body>
 </html>
