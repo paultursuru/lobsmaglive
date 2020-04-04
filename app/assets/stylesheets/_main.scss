@@ -82,8 +82,8 @@
           justify-content: center;
           align-items: center;
           color: white;
-          background-color: rgba(20, 20, 20, 0.3);
-          transition: all 1s ease;
+          background-color: rgba(20, 20, 20, 0.4);
+          transition: all 0.5s ease;
         }
       }
       .track-card {
@@ -94,11 +94,15 @@
       }
       .track-info {
         position: absolute;
-        display: none;
+        display: flex;
         width: 250px;
         height: 250px;
-        color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
         background-color: transparent;
+        transition: all 0.5s ease;
       }
     }
   }
