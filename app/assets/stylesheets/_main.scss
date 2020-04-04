@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 400px;
   h1 {
     margin: 0;
     font-size: 60px;
@@ -20,15 +20,15 @@
 
 .other-pages {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 50px;
   align-items: center;
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
   margin: 0 0 50px 0;
+  padding: 0 15%;
   a {
     color: black;
-    margin: 0 100px;
   }
 }
 
