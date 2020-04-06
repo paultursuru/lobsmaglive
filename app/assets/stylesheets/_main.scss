@@ -10,12 +10,12 @@ body {
   height: 400px;
   h1 {
     margin: 0;
-    font-size: 60px;
+    font-size: 80px;
   }
   h5 {
-    margin: 20px 0 0 0;
-    font-size: 30px;
-    // font-weight: lighter;
+    margin: 50px 0 0 0;
+    font-size: 23px;
+    font-weight: 100;
   }
 }
 
@@ -29,11 +29,14 @@ body {
   border-bottom: solid 1px gray;
   margin: 0 0 50px 0;
   padding: 0 15%;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
   a {
     color: black;
   }
 }
-
 
 .containing {
   display: flex;
