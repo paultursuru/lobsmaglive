@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Archivo Narrow', sans-serif;
+}
 .header-lobs {
   width: 100%;
   display: flex;
@@ -13,7 +15,7 @@
   h5 {
     margin: 20px 0 0 0;
     font-size: 30px;
-    font-weight: lighter;
+    // font-weight: lighter;
   }
 }
 
