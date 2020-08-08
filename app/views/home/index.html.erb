@@ -1,5 +1,5 @@
 <div class="banner-newest-track">
-  <div class="newest-track" data-mixcloud-play-button="https://www.mixcloud.com/LobservatoireLive" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
+  <div class="newest-track" data-mixcloud-play-button="https://www.mixcloud.com/LobservatoireLive/" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
   <div class="newest-track-info">
     <div class="newest-track-head">La playlist de la semaine</div>
     <div class="newest-track-name"><%= @tracks["data"][0]["name"] %></div>
@@ -11,7 +11,7 @@
     <div class="track-block">
       <div class="track-card" style="background-image: url(<%=track["pictures"]["320wx320h"]%>)">
       </div>
-      <div class="track-info" data-mixcloud-play-button="https://www.mixcloud.com/LobservatoireLive/<%=track["slug"]%>">
+      <div class="track-info" data-mixcloud-play-button="<%=track["url"]%>">
         <h5><%= track["name"] %></h5>
         <p><%= (track["audio_length"].to_i)/60 %> min</p>
       </div>
