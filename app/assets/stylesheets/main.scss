@@ -19,7 +19,10 @@ body {
     font-weight: 100;
   }
 }
-
+#mixcloud-widget {
+  position: fixed;
+  bottom: 0;
+}
 .other-pages {
   display: flex;
   justify-content: space-between;
