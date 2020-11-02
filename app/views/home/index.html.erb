@@ -1,5 +1,5 @@
 <div class="banner-newest-track">
-  <div class="newest-track" data-mixcloud-play-button="https://www.mixcloud.com/LobservatoireLive/" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
+  <div id="weekly-mixcloud" class="newest-track" data-mixcloud-play-button="https://www.mixcloud.com/LobservatoireLive/" style="background-image: url(<%= @tracks["data"][0]["pictures"]["extra_large"] %>)"></div>
   <div class="newest-track-info">
     <div class="newest-track-head">La playlist de la semaine</div>
     <div class="newest-track-name"><%= @tracks["data"][0]["name"] %></div>
@@ -33,4 +33,14 @@
         document.body.appendChild(tag);
       }, false);
     };
+    document.getElementById("weekly-mixcloud").addEventListener('click', function(){
+        document.getElementById("mixcloud-player").remove();
+        const tag = document.createElement("iframe");
+        tag.id = "mixcloud-player"
+        tag.width="100%"
+        tag.height="60"
+        tag.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2FLobservatoireLive%2F"
+        tag.frameBorder="0"
+        document.body.appendChild(tag);
+    }, false);
 </script>
