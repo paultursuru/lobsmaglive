@@ -8,10 +8,10 @@
 
 <div class="all-tracks">
   <% @tracks["data"].each do |track| %>
-    <div class="track-block">
+    <div class="track-block" data-mixcloud-play-button="<%=track["key"]%>">
       <div class="track-card" style="background-image: url(<%=track["pictures"]["320wx320h"]%>)">
       </div>
-      <div class="track-info" data-mixcloud-play-button="<%=track["url"]%>">
+      <div class="track-info">
         <h5><%= track["name"] %></h5>
         <p><%= (track["audio_length"].to_i)/60 %> min</p>
       </div>
@@ -19,3 +19,18 @@
   <% end %>
 </div>
 
+<script>
+    const elems = document.querySelectorAll('.track-block')
+    for(let i = 0; i < elems.length; i++) {
+      elems[i].addEventListener('click', function(){
+        document.getElementById("mixcloud-player").remove();
+        const tag = document.createElement("iframe");
+        tag.id = "mixcloud-player"
+        tag.width="100%"
+        tag.height="60"
+        tag.src = "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=" + elems[i].attributes[1].value
+        tag.frameBorder="0"
+        document.body.appendChild(tag);
+      }, false);
+    };
+</script>
